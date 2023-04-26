@@ -1,4 +1,4 @@
-import Front
+from entrega_V1.Grafics import Front
 
 
 def main():
