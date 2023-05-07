@@ -14,7 +14,7 @@ def doScrappingWeb(columna, stringClasePom):
         driver.get(enlace)
         driver.maximize_window()
         wait = WebDriverWait(driver, 3)
-        button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, stringClasePom)))
+        button = wait.until(EC.presence_of_element_located((By.XPATH, stringClasePom)))
         time.sleep(2)
         button.click()
         time.sleep(2)

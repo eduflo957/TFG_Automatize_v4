@@ -45,7 +45,7 @@ botonExaminar.place(x="600", y="200", width="100")
 
 
 # TEXTO Y CAJA DE NOMBRE CLASE
-etiquetaClasePom = tk.Label(ventana, text="Nombre de la clase del POM: ")
+etiquetaClasePom = tk.Label(ventana, text="Ruta XPATH: ")
 etiquetaClasePom.pack()
 etiquetaClasePom.place(x="100", y="250")
 etiquetaClasePom.configure(bg='#FFFFFF')
