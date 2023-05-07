@@ -1,11 +1,9 @@
 from entrega_V1.Grafics import Front
-
+from entrega_V1.Resources import BaseDatosLog
 
 def main():
-    # C:/Users/Edu guapo/Desktop/carpetaFicheros
-    # TFG_pruebas_enlaces3.xls
-    # barre
     Front.ventana.mainloop()
 
 if __name__ == '__main__':
     main()
+    print(BaseDatosLog.mydb)

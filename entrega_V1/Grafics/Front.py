@@ -3,6 +3,7 @@ from tkinter import filedialog
 
 from entrega_V1.Logics import Fichero
 from entrega_V1.Logics import Scrapping
+from entrega_V1.Resources import Directorios
 
 # VARIABLES GLOBALES
 filePath = ""
@@ -15,7 +16,7 @@ ventana.configure(bg='#FFFFFF')
 
 # IMAGEN LOGO
 imagenLogo = tk.PhotoImage(
-    file="C:\\Users\\Edu guapo\\Desktop\\TFG_Automatize3\\entrega_V1\\Grafics\\automatize_logo_2.png")
+    file=Directorios.rutaRepositorio() + "\\entrega_V1\\Grafics\\automatize_logo_2.png")
 cajaImagen = tk.Label(ventana, image=imagenLogo)
 cajaImagen.pack()
 cajaImagen.place(relx=0.5, rely=0.15, anchor="center")
@@ -59,8 +60,11 @@ def inputClasePom():
 def ejecutar():
     global filePath
     global clasePom
+    clasePom = inputClasePom()
+    print(clasePom)
     Scrapping.doScrappingWeb(
         Fichero.readFichToArray(filePath), clasePom)
+
 
 # BOTON EJECUTAR
 botonEjecutar = tk.Button(ventana, text="Ejecutar programa", command=ejecutar)
