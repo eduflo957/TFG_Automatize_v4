@@ -1,9 +1,9 @@
 import pandas as pd
 
 
-def readFichToArray(rutaCompleta):
+def readFichToArray(filePath):
 
-    doc = pd.read_excel(rutaCompleta, header=None)
+    doc = pd.read_excel(filePath, header=None)
 
     dimension = doc.shape
     tamFilas = dimension[0]
