@@ -1,0 +1,53 @@
+[33mcommit 83bbc0de37ff198f940bc16e7c586e2a6faef4ce[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31mgithub/master[m[33m)[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Mon May 8 22:48:12 2023 +0200
+
+    V1: he intentado quitar el primer pop up de las páginas, pero es muy complicado, recuerda que la versión anterior es más simple
+
+[33mcommit d4dc6f5f6f2c9a5bd13d07c1b83cb402063a98e5[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Mon May 8 00:34:12 2023 +0200
+
+    V1: [ahora se buscará a través de XPATH]
+
+[33mcommit c36c7e2d6a00cf6675c24d00e487840964397ea5[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Sun May 7 23:45:01 2023 +0200
+
+    V1: intento de control de errores e implementación bbdd
+
+[33mcommit 6db4909aca67fbc1f44981d43732eda963b5d5af[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Sun May 7 22:02:49 2023 +0200
+
+    V1: visualización simplificada
+
+[33mcommit 76c5bdbaabd3a2c977ca9edc2c4b78bfc97c3cee[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Thu Apr 27 01:01:59 2023 +0200
+
+    V1: front stilos a medias
+
+[33mcommit 65a139772efafffae15816c756009be3bddbfd6e[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Wed Apr 26 23:30:25 2023 +0200
+
+    V1: Posicionamiento objetos front, terminado
+
+[33mcommit 4eb8d0cbfa0e43b05e29f2c928b640ecef2c451b[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Wed Apr 26 21:41:00 2023 +0200
+
+    V1: Lógica terminada.
+
+[33mcommit dd419980068507f657a7a5ffd59474c38834fffc[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Tue Apr 25 13:35:30 2023 +0200
+
+    MAIN-LIMPIO: primer intento, falla por tema futuros
+
+[33mcommit d2cb8119fbee5e0baa7c1c6d780f266348f173cc[m
+Author: BungaEdu <eduardoflores.9595@gmail.com>
+Date:   Sun Apr 23 22:59:33 2023 +0200
+
+    Initial commit
