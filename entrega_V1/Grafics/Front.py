@@ -8,6 +8,7 @@ from entrega_V1.Resources import Directorios
 # VARIABLES GLOBALES
 filePath = ""
 clasePom = ""
+popUp = False
 
 # VENTANA PRINCIPAL
 ventana = tk.Tk()
@@ -44,30 +45,79 @@ botonExaminar.pack()
 botonExaminar.place(x="600", y="200", width="100")
 
 
-# TEXTO Y CAJA DE NOMBRE CLASE
-etiquetaClasePom = tk.Label(ventana, text="Ruta XPATH: ")
-etiquetaClasePom.pack()
-etiquetaClasePom.place(x="100", y="250")
-etiquetaClasePom.configure(bg='#FFFFFF')
-cajaClasePom = tk.Entry(ventana)
-cajaClasePom.pack()
-cajaClasePom.place(x="300", y="250", width="400")
+# TEXTO Y CAJA DE Xpath
+etiquetaXpath = tk.Label(ventana, text="Búsqueda XPATH: ")
+etiquetaXpath.pack()
+etiquetaXpath.place(x="100", y="250")
+etiquetaXpath.configure(bg='#FFFFFF')
+cajaXpath = tk.Entry(ventana)
+cajaXpath.pack()
+cajaXpath.place(x="300", y="250", width="400")
+
+
+# TEXTO Y CAJA POP UP
+etiquetaPopupInicial = tk.Label(ventana, text="¿Aparece un pop up inicial?"
+                                              "\n(Abre la ruta padre en un navegador de incógnito,\n"
+                                              "si aparece un PopUp, escribe su búsqueda Xpath)", anchor="w")
+etiquetaPopupInicial.pack()
+etiquetaPopupInicial.place(x="100", y="300")
+etiquetaPopupInicial.configure(bg='#FFFFFF')
+
+
+# Funciones para los botones
+def botonSi():
+    popUp=True
+    print("popUp: "+str(popUp))
+    etiquetaXpathPopUp.place(x="100", y="360")
+    cajaXpathPopUp.place(x="300", y="360", width="400")
+
+def botonNo():
+    popUp=False
+    print("popUp: "+str(popUp))
+    etiquetaXpathPopUp.place_forget()
+    cajaXpathPopUp.place_forget()
+
+# Crear la etiqueta y la caja de texto
+etiquetaXpathPopUp = tk.Label(ventana, text="Búsqueda XPATH del PopUp: ")
+etiquetaXpathPopUp.configure(bg='#FFFFFF')
+etiquetaXpathPopUp.place(x="100", y="1000")
+cajaXpathPopUp = tk.Entry(ventana)
+cajaXpathPopUp.place(x="300", y="1000", width="400")
+
+
+etiquetaXpathPopUp = tk.Label(ventana, text="Búsqueda XPATH del PopUp: ")
+etiquetaXpathPopUp.configure(bg='#FFFFFF')
+etiquetaXpathPopUp.place(x="100", y="1000")
+cajaXpathPopUp = tk.Entry(ventana)
+cajaXpathPopUp.place(x="300", y="1000", width="400")
+
+# Crear los botones
+boton_si = tk.Button(ventana, text="Sí", command=botonSi)
+boton_no = tk.Button(ventana, text="No", command=botonNo)
+boton_si.place(x="400", y="310", width="40")
+boton_no.place(x="460", y="310", width="40")
+
+
 
 def inputClasePom():
-    return cajaClasePom.get()
+    return cajaXpath.get()
+
+def inputXpathPopup():
+    return cajaXpathPopUp.get()
 
 
 def ejecutar():
     global filePath
     global clasePom
     clasePom = inputClasePom()
+    infoXpathPopup = inputXpathPopup()
     print(clasePom)
     Scrapping.doScrappingWeb(
-        Fichero.readFichToArray(filePath), clasePom)
+        Fichero.readFichToArray(filePath), clasePom, popUp, infoXpathPopup, Fichero.readFichFindDominio(filePath))
 
 
 # BOTON EJECUTAR
 botonEjecutar = tk.Button(ventana, text="Ejecutar programa", command=ejecutar)
 botonEjecutar.pack()
-botonEjecutar.place(relx=0.5, rely=0.5, anchor="center", y="100")
+botonEjecutar.place(relx=0.5, rely=0.5, anchor="center", y="170")
 botonEjecutar.configure(bg='#28df28')
